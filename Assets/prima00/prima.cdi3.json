@@ -1,0 +1,317 @@
+{
+	"Version": 3,
+	"Parameters": [
+		{
+			"Id": "ParamAngleX",
+			"GroupId": "",
+			"Name": "角度 X"
+		},
+		{
+			"Id": "ParamAngleY",
+			"GroupId": "",
+			"Name": "角度 Y"
+		},
+		{
+			"Id": "ParamAngleZ",
+			"GroupId": "",
+			"Name": "角度 Z"
+		},
+		{
+			"Id": "ParamEyeLOpen",
+			"GroupId": "",
+			"Name": "左目　開閉"
+		},
+		{
+			"Id": "ParamEyeLSmile",
+			"GroupId": "",
+			"Name": "左目　笑顔"
+		},
+		{
+			"Id": "ParamEyeROpen",
+			"GroupId": "",
+			"Name": "右目　開閉"
+		},
+		{
+			"Id": "ParamEyeRSmile",
+			"GroupId": "",
+			"Name": "右目　笑顔"
+		},
+		{
+			"Id": "ParamEyeBallX",
+			"GroupId": "",
+			"Name": "目玉 X"
+		},
+		{
+			"Id": "ParamEyeBallY",
+			"GroupId": "",
+			"Name": "目玉 Y"
+		},
+		{
+			"Id": "ParamBrowLX",
+			"GroupId": "",
+			"Name": "左眉　左右"
+		},
+		{
+			"Id": "ParamBrowLY",
+			"GroupId": "",
+			"Name": "左眉　上下"
+		},
+		{
+			"Id": "ParamBrowRX",
+			"GroupId": "",
+			"Name": "右眉　左右"
+		},
+		{
+			"Id": "ParamBrowRY",
+			"GroupId": "",
+			"Name": "右眉　上下"
+		},
+		{
+			"Id": "ParamBrowLAngle",
+			"GroupId": "",
+			"Name": "左眉　角度"
+		},
+		{
+			"Id": "ParamBrowRAngle",
+			"GroupId": "",
+			"Name": "右眉　角度"
+		},
+		{
+			"Id": "ParamBrowLForm",
+			"GroupId": "",
+			"Name": "左眉　変形"
+		},
+		{
+			"Id": "ParamBrowRForm",
+			"GroupId": "",
+			"Name": "右眉　変形"
+		},
+		{
+			"Id": "ParamMouthForm",
+			"GroupId": "",
+			"Name": "口　変形"
+		},
+		{
+			"Id": "ParamMouthOpenY",
+			"GroupId": "",
+			"Name": "口　開閉"
+		},
+		{
+			"Id": "Param",
+			"GroupId": "",
+			"Name": "腕左"
+		},
+		{
+			"Id": "Param2",
+			"GroupId": "",
+			"Name": "腕左2"
+		},
+		{
+			"Id": "Param3",
+			"GroupId": "",
+			"Name": "腕右"
+		},
+		{
+			"Id": "Param4",
+			"GroupId": "",
+			"Name": "腕右2"
+		},
+		{
+			"Id": "ParamCheek",
+			"GroupId": "",
+			"Name": "照れ"
+		},
+		{
+			"Id": "ParamBodyAngleX",
+			"GroupId": "",
+			"Name": "体の回転　X"
+		},
+		{
+			"Id": "ParamBodyAngleZ",
+			"GroupId": "",
+			"Name": "体の回転　Z"
+		},
+		{
+			"Id": "ParamBreath",
+			"GroupId": "",
+			"Name": "呼吸"
+		},
+		{
+			"Id": "ParamHairFront",
+			"GroupId": "",
+			"Name": "髪揺れ　前"
+		},
+		{
+			"Id": "ParamHairSide",
+			"GroupId": "",
+			"Name": "髪揺れ　横"
+		},
+		{
+			"Id": "ParamBodyAngleY",
+			"GroupId": "",
+			"Name": "体の回転　Y"
+		},
+		{
+			"Id": "ParamHairBack",
+			"GroupId": "",
+			"Name": "髪揺れ　後"
+		}
+	],
+	"ParameterGroups": [],
+	"Parts": [
+		{
+			"Id": "Part",
+			"Name": "線画"
+		},
+		{
+			"Id": "PartSketch0",
+			"Name": "[ 下絵 ]"
+		},
+		{
+			"Id": "Part2",
+			"Name": "顔"
+		},
+		{
+			"Id": "Part6",
+			"Name": "前髪"
+		},
+		{
+			"Id": "Part12",
+			"Name": "フェイスライン"
+		},
+		{
+			"Id": "Part14",
+			"Name": "スカート"
+		},
+		{
+			"Id": "Part15",
+			"Name": "胸部"
+		},
+		{
+			"Id": "Part16",
+			"Name": "腕章"
+		},
+		{
+			"Id": "Part27",
+			"Name": "靴"
+		},
+		{
+			"Id": "Part17",
+			"Name": "靴"
+		},
+		{
+			"Id": "Part19",
+			"Name": "ヘッドフォン"
+		},
+		{
+			"Id": "Part31",
+			"Name": "右目"
+		},
+		{
+			"Id": "Part29",
+			"Name": "左目"
+		},
+		{
+			"Id": "Part3",
+			"Name": "開き"
+		},
+		{
+			"Id": "Part28",
+			"Name": "右もみあげ"
+		},
+		{
+			"Id": "Part22",
+			"Name": "右インテーク"
+		},
+		{
+			"Id": "Part7",
+			"Name": "左インテーク"
+		},
+		{
+			"Id": "Part8",
+			"Name": "1"
+		},
+		{
+			"Id": "Part9",
+			"Name": "左2"
+		},
+		{
+			"Id": "Part23",
+			"Name": "右2"
+		},
+		{
+			"Id": "Part24",
+			"Name": "右3"
+		},
+		{
+			"Id": "Part10",
+			"Name": "左3"
+		},
+		{
+			"Id": "Part33",
+			"Name": "右4"
+		},
+		{
+			"Id": "Part32",
+			"Name": "4"
+		},
+		{
+			"Id": "Part11",
+			"Name": "左もみあげ"
+		},
+		{
+			"Id": "Part26",
+			"Name": "髪影右(フェイスライン-c)"
+		},
+		{
+			"Id": "Part13",
+			"Name": "髪影(フェイスライン-c)"
+		},
+		{
+			"Id": "Part35",
+			"Name": "左"
+		},
+		{
+			"Id": "Part18",
+			"Name": "左"
+		},
+		{
+			"Id": "Part25",
+			"Name": "右"
+		},
+		{
+			"Id": "Part20",
+			"Name": "カメラ"
+		},
+		{
+			"Id": "Part21",
+			"Name": "左"
+		},
+		{
+			"Id": "Part34",
+			"Name": "眼球"
+		},
+		{
+			"Id": "Part30",
+			"Name": "眼球"
+		}
+	],
+	"CombinedParameters": [
+		[
+			"ParamAngleX",
+			"ParamAngleY"
+		],
+		[
+			"ParamEyeBallX",
+			"ParamEyeBallY"
+		],
+		[
+			"ParamBrowLX",
+			"ParamBrowLY"
+		],
+		[
+			"ParamBrowRX",
+			"ParamBrowRY"
+		]
+	]
+}

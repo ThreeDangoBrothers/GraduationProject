@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 403ae2dd693bb1d4b924f6b8d206b053, type: 3}
+  m_Name: prima00.fadeMotionList
+  m_EditorClassIdentifier: 
+  MotionInstanceIds: 6c25ffff3625ffff0e25ffff
+  CubismFadeMotionObjects:
+  - {fileID: 11400000, guid: 5bffe06112e5d8a438a05773e178a0a3, type: 2}
+  - {fileID: 11400000, guid: d5ba2725cde9620449438076ef23b757, type: 2}
+  - {fileID: 11400000, guid: 08b1f3f780909604faf3cef5bddddf2d, type: 2}
