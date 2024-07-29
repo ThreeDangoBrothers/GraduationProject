@@ -18,7 +18,7 @@ public class changeokuyama : MonoBehaviour {
         step_time += Time.deltaTime;
  
         // 3秒後に画面遷移（scene2へ移動）
-        if (step_time >= 30.0f)
+        if (step_time >= 90.0f)
         {
             SceneManager.LoadScene("okuyama");
         }

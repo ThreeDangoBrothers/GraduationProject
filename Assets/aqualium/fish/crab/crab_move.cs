@@ -20,7 +20,7 @@ public class Crab_move : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(new Vector3(0, 0, direction*-0.008f));
+        transform.Translate(new Vector3(0, 0, direction*-0.006f));
 
         
     }
