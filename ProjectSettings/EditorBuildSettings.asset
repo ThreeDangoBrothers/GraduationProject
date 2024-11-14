@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/yamamoto.unity
     guid: 0673b9a0b1c079c45a6d8a8e634a25e8
+  - enabled: 1
+    path: Assets/Scenes/BookUI.unity
+    guid: d1c8837d0e2d10e418e98a0d8d7045a1
   m_configObjects: {}
