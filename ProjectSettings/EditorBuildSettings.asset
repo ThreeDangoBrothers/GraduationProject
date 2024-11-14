@@ -6,11 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/okuyama.unity
-    guid: acccfa6144698f1448186f199bd37163
+    path: Assets/Scenes/StartGameScene.unity
+    guid: 95f7ef9d65fec054f824ead2d13d4de8
   - enabled: 1
     path: Assets/Scenes/aqua3d.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/okuyama.unity
+    guid: a6150b4418907e2499fff851c39d8d77
   - enabled: 1
     path: Assets/Scenes/fukushima.unity
     guid: f1e9a5c2fb60bb54d923e6eeab57b922
