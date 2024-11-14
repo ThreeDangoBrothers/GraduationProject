@@ -2228,7 +2228,7 @@ GameObject:
   - component: {fileID: 264092346}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10002,7 +10002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e389a353013da044b95fb0171dd1bb5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cube: {fileID: 0}
+  _cube: {fileID: 264092345}
   _distanceGap: 100
   _minSize: 20
   _maxSize: 100
