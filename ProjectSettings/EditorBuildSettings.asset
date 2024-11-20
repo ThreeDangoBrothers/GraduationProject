@@ -18,9 +18,21 @@ EditorBuildSettings:
     path: Assets/Scenes/fukushima.unity
     guid: f1e9a5c2fb60bb54d923e6eeab57b922
   - enabled: 1
-    path: Assets/Scenes/yamamoto.unity
-    guid: 0673b9a0b1c079c45a6d8a8e634a25e8
-  - enabled: 1
     path: Assets/Scenes/BookUI.unity
     guid: d1c8837d0e2d10e418e98a0d8d7045a1
+  - enabled: 1
+    path: Assets/Scenes/NewOkuyama.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/StartAqua3d.unity
+    guid: d15ecf016b4b44942ba18835ab677d51
+  - enabled: 1
+    path: Assets/Scenes/StartNewOkuyama.unity
+    guid: 42679bd4a1853f347b1af392bbc37647
+  - enabled: 1
+    path: Assets/Scenes/StartYamamoto.unity
+    guid: fa9d7705f63d6c94ebf366554e69533b
+  - enabled: 1
+    path: Assets/Scenes/Yamamoto.unity
+    guid: 7a874536d0fd7db4cb8dd00fbda748ee
   m_configObjects: {}

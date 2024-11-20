@@ -32,6 +32,9 @@ public class MoveCube3_copy : MonoBehaviour
     private List<int> _triangles;
     [SerializeField] private Material _mat;
 
+    private float timer = 0f;  // Timer to track elapsed time
+    private bool hasExecuted = false;
+
     void Start()
     {
         _urg = new URGSensor();
@@ -44,7 +47,7 @@ public class MoveCube3_copy : MonoBehaviour
         var meshRenderer = gameObject.AddComponent<MeshRenderer>();
         _mesh = meshFilter.mesh;
         _mesh.indexFormat = UnityEngine.Rendering.IndexFormat.UInt32;
-        meshRenderer.sharedMaterial = _mat;
+        //meshRenderer.sharedMaterial = _mat;
 
         _mesh.Clear();
 
@@ -65,16 +68,25 @@ public class MoveCube3_copy : MonoBehaviour
             _triangles.Add(i);
         }
         _mesh.SetTriangles(_triangles, 0);
+        
+            
+        
     }
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            _urg.StoreCalibrationData(); // キャリブレーションデータを保存
+        
+            if (!hasExecuted) {
+        timer += Time.deltaTime;  // Increment timer by time passed since last frame
+        
+        if (timer >= 0.1f) {  // Check if 1 second has passed
+            _urg.StoreCalibrationData(); // キャリブレーションデータを保存 
             _calibrated = true; // キャリブレーションが完了したとマーク
-            _mesh.Clear(); // メッシュをクリア
+            //_mesh.Clear(); // メッシュをクリア
+
+            hasExecuted = true;  // Set flag to true so the code doesn't run again
         }
+            }
 
         transform.localPosition = new Vector3(_offsetXY_mm.x, _offsetXY_mm.y, 0f) / 1000f;
         transform.localEulerAngles = new Vector3(0f, 0f, _offsetRot_deg + 180f);

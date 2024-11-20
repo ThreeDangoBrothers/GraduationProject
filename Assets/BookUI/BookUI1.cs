@@ -5,7 +5,7 @@ using UnityEngine.UI; // Buttonのために必要
 namespace UnityEngine.UI.Extensions
 {
     [DisallowMultipleComponent]
-    public class BookUI : MonoBehaviour
+    public class BookUI1 : MonoBehaviour
     {
         [SerializeField, Range(0, 3)]
         float TurnTime = 0.5f;
@@ -111,15 +111,11 @@ namespace UnityEngine.UI.Extensions
     
         if (other.gameObject.tag == "food")
         {
-            CurrentPage++;
+            CurrentPage--;
             Debug.Log("ボタン遷移");
             
         }
         }
-
-        
-        
-        
         public void OnBackPageButtonPressed()
         {
             CurrentPage--; // ページを進める

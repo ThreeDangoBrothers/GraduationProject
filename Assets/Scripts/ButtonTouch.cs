@@ -23,8 +23,8 @@ public class ButtonTouch : MonoBehaviour
     
         if (other.gameObject.tag == "food")
         {
-            SceneManager.LoadScene("okuyama");
-            Debug.Log("ボタン遷移");
+            SceneManager.LoadScene("StartNewOkuyama");
+            Debug.Log("StartOkuyama遷移");
             //anim.SetTrigger("ShellMove");
             //anim.SetBool("blRot", true);
             //GetComponent<AudioSource>().Play();

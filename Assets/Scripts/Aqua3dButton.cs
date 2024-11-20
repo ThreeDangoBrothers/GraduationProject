@@ -22,8 +22,8 @@ public class Aqua3dButton : MonoBehaviour
     
         if (other.gameObject.tag == "food")
         {
-            SceneManager.LoadScene("aqua3d");
-            Debug.Log("ボタン遷移");
+            SceneManager.LoadScene("StartAqua3d");
+            Debug.Log("StartAqua3d遷移");
             //anim.SetTrigger("ShellMove");
             //anim.SetBool("blRot", true);
             //GetComponent<AudioSource>().Play();

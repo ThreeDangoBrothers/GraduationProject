@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class YamaButton : MonoBehaviour
+public class StartNewOkuyama : MonoBehaviour
 {
-    public MoveCube3 moveCube; 
     // Start is called before the first frame update
+    public MoveCube3 moveCube; 
     void Start()
     {
         
@@ -17,14 +17,13 @@ public class YamaButton : MonoBehaviour
     {
         
     }
-
     private void OnTriggerEnter(Collider other)
     {
     
         if (other.gameObject.tag == "food")
         {
-            SceneManager.LoadScene("StartYamamoto");
-            Debug.Log("StartYamamoto遷移");
+            SceneManager.LoadScene("NewOkuyama");
+            Debug.Log("okuyama遷移");
             //anim.SetTrigger("ShellMove");
             //anim.SetBool("blRot", true);
             //GetComponent<AudioSource>().Play();

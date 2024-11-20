@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class YamaButton : MonoBehaviour
+public class Janken : MonoBehaviour
 {
-    public MoveCube3 moveCube; 
     // Start is called before the first frame update
+    public MoveCube3 moveCube; 
+
+    private float speed = 5.0f;
+    [SerializeField] Transform target;
     void Start()
     {
         
@@ -17,18 +20,14 @@ public class YamaButton : MonoBehaviour
     {
         
     }
-
     private void OnTriggerEnter(Collider other)
     {
     
         if (other.gameObject.tag == "food")
         {
-            SceneManager.LoadScene("StartYamamoto");
-            Debug.Log("StartYamamoto遷移");
-            //anim.SetTrigger("ShellMove");
-            //anim.SetBool("blRot", true);
-            //GetComponent<AudioSource>().Play();
-           //ループつけてね
+            Debug.Log("じゃんけん");
+            transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            
         }
     }
 }
