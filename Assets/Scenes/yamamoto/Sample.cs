@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Janken : MonoBehaviour
+public class   Sample : MonoBehaviour
 {
     // Start is called before the first frame update
     public MoveCube3 moveCube; 
@@ -25,10 +25,10 @@ public class Janken : MonoBehaviour
     
         if (other.gameObject.tag == "food")
         {
-            Debug.Log("じゃんけん");
+            Debug.Log("サンプル");
             //transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
             
-            RemoveAllObjectsWithTags(new string[] { "Delete", "Dance", "Sample" });
+            RemoveAllObjectsWithTags(new string[] { "Delete", "Janken", "Dance" });
         }
     }
     // 指定タグのすべてのオブジェクトを削除するメソッド

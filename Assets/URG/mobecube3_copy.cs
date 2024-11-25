@@ -76,17 +76,16 @@ public class MoveCube3_copy : MonoBehaviour
     void Update()
     {
         
-            if (!hasExecuted) {
-        timer += Time.deltaTime;  // Increment timer by time passed since last frame
+        if (!hasExecuted) {
+            timer += Time.deltaTime;  // Increment timer by time passed since last frame
         
-        if (timer >= 0.1f) {  // Check if 1 second has passed
-            _urg.StoreCalibrationData(); // キャリブレーションデータを保存 
-            _calibrated = true; // キャリブレーションが完了したとマーク
-            //_mesh.Clear(); // メッシュをクリア
-
-            hasExecuted = true;  // Set flag to true so the code doesn't run again
-        }
+            if (timer >= 1f) {  // Check if 1 second has passed
+                _urg.StoreCalibrationData(); // キャリブレーションデータを保存 
+                _calibrated = true; // キャリブレーションが完了したとマーク
+                //_mesh.Clear(); // メッシュをクリア
+                hasExecuted = true;  // Set flag to true so the code doesn't run again
             }
+        }
 
         transform.localPosition = new Vector3(_offsetXY_mm.x, _offsetXY_mm.y, 0f) / 1000f;
         transform.localEulerAngles = new Vector3(0f, 0f, _offsetRot_deg + 180f);

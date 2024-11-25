@@ -8,6 +8,10 @@ TagManager:
   - food
   - fish
   - button
+  - Delete
+  - Dance
+  - Sample
+  - Janken
   layers:
   - Default
   - TransparentFX

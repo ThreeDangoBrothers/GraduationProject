@@ -5,12 +5,12 @@ using UnityEngine;
 public class CubeMove : MonoBehaviour
 {
     private int _randomRotation;
-    private MoveCube3 _moveCube3;
+    private MoveCube3_copy _moveCube3_copy;
 
     void Start()
     {
         // Find the MoveCube3 script instance in the scene
-        _moveCube3 = GameObject.FindObjectOfType<MoveCube3>();
+        _moveCube3_copy = GameObject.FindObjectOfType<MoveCube3_copy>();
 
         
         
@@ -22,12 +22,12 @@ public class CubeMove : MonoBehaviour
         transform.Translate(new Vector3(0, 0, 0.005f));
 
         
-        if (_moveCube3 != null)
+        if (_moveCube3_copy != null)
         {
             
-            if (_moveCube3._objectDetected) 
+            if (_moveCube3_copy._objectDetected) 
             {
-                transform.LookAt(_moveCube3.pp);
+                transform.LookAt(_moveCube3_copy.pp);
             }
         }
 
