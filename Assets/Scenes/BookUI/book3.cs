@@ -11,6 +11,8 @@ public class book3 : MonoBehaviour
 
     private GameObject targetObject;
 
+    //ikkkkkk
+
     void Start()
     {
         // foodオブジェクトを探す
