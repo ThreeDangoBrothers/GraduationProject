@@ -4,54 +4,63 @@ using UnityEngine;
 
 public class book2 : MonoBehaviour
 {
-    public GameObject targetObject;
-    public Vector2 rotationSpeed = new Vector2(0.1f, 0.2f);
-    public bool reverse;
-    public float zoomSpeed = 1;
+    public GameObject targetObject; // 回転させるオブジェクト
+    public Vector2 rotationSpeed = new Vector2(10f, 20f); // 回転速度を大きく設定
+    public bool reverse; // 回転方向の反転
+    [SerializeField] private GameObject target; // 座標変化を追跡するターゲット
 
-    private Camera mainCamera;
-    private Vector2 lastMousePosition;
-
-    Vector3 tmp = GameObject.Find("food").transform.position;
-
+    private Vector3 previousPosition; // 前回の座標
 
     void Start()
     {
-        mainCamera = Camera.main;
+        target = GameObject.Find("food"); // ターゲットを取得
+        if (target != null)
+        {
+            previousPosition = target.transform.position;
+        }
+        else
+        {
+            Debug.LogError("ターゲットオブジェクトが見つかりません。");
+        }
+
+        if (targetObject == null)
+        {
+            Debug.LogError("Target Objectが設定されていません。");
+        }
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (target == null || targetObject == null) return;
+
+        // 現在のターゲット位置
+        Vector3 currentPosition = target.transform.position;
+
+        // 座標変化量を計算
+        Vector3 deltaPosition = (currentPosition - previousPosition) * 50f; // 倍率を調整
+        Debug.Log($"Delta Position: {deltaPosition}");
+
+        // 微小な動きの場合は無視
+        if (deltaPosition.magnitude < 0.01f) return;
+
+        // 回転計算
+        Vector3 newAngle = Vector3.zero;
+        if (!reverse)
         {
-            lastMousePosition = Input.mousePosition;
+            newAngle.x = deltaPosition.y * rotationSpeed.x;
+            newAngle.y = deltaPosition.x * rotationSpeed.y;
         }
-        else if (Input.GetMouseButton(0))
+        else
         {
-            if (!reverse)
-            {
-                var x = (Input.mousePosition.y - lastMousePosition.y);
-                var y = (lastMousePosition.x - Input.mousePosition.x);
-
-                var newAngle = Vector3.zero;
-                newAngle.x = x * rotationSpeed.x;
-                newAngle.y = y * rotationSpeed.y;
-
-                targetObject.transform.Rotate(newAngle);
-                lastMousePosition = Input.mousePosition;
-            }
-            else
-            {
-                var x = (lastMousePosition.y - Input.mousePosition.y);
-                var y = (Input.mousePosition.x - lastMousePosition.x);
-
-                var newAngle = Vector3.zero;
-                newAngle.x = x * rotationSpeed.x;
-                newAngle.y = y * rotationSpeed.y;
-
-                targetObject.transform.Rotate(newAngle);
-                lastMousePosition = Input.mousePosition;
-            }
+            newAngle.x = -deltaPosition.y * rotationSpeed.x;
+            newAngle.y = -deltaPosition.x * rotationSpeed.y;
         }
+        Debug.Log($"New Angle: {newAngle}");
+
+        // 回転を適用
+        targetObject.transform.Rotate(newAngle);
+
+        // 前回の座標を更新
+        previousPosition = currentPosition;
     }
 }
