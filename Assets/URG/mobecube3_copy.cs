@@ -25,7 +25,9 @@ public class MoveCube3_copy : MonoBehaviour
     public bool _objectDetected = false;
     public bool _objectNotDetected = false;
     public Vector3 p { get; private set; }
-    public Vector3 pp { get; private set; }
+    public Vector3 pp { get; private set; }// 検出したオブジェクトの位置
+
+    
 
     private Mesh _mesh;
     private List<Vector3> _vertices;
