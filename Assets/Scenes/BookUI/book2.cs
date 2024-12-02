@@ -37,11 +37,11 @@ public class book2 : MonoBehaviour
         Vector3 currentPosition = target.transform.position;
 
         // 座標変化量を計算
-        Vector3 deltaPosition = (currentPosition - previousPosition) * 50f; // 倍率を調整
+        Vector3 deltaPosition = (currentPosition - previousPosition) * 10f; // 倍率を調整
         Debug.Log($"Delta Position: {deltaPosition}");
 
         // 微小な動きの場合は無視
-        if (deltaPosition.magnitude < 0.1f) return;
+        if (deltaPosition.magnitude < 0.01f) return;
 
         // 回転計算
         Vector3 newAngle = Vector3.zero;
@@ -52,9 +52,10 @@ public class book2 : MonoBehaviour
         }
         else
         {
-            newAngle.x = deltaPosition.y * rotationSpeed.x;
-            newAngle.y = deltaPosition.x * rotationSpeed.y;
+            newAngle.x = -deltaPosition.y * rotationSpeed.x;
+            newAngle.y = -deltaPosition.x * rotationSpeed.y;
         }
+        Debug.Log($"New Angle: {newAngle}");
 
         // 回転を適用
         targetObject.transform.Rotate(newAngle);

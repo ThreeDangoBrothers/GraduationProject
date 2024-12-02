@@ -958,7 +958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 147781023}
-  rotationSpeed: {x: 2, y: 3}
+  rotationSpeed: {x: 20, y: 3}
   reverse: 0
   target: {fileID: 0}
 --- !u!1 &168292696
@@ -6109,7 +6109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 2101663200}
-  rotationSpeed: {x: 0.6, y: 1}
+  rotationSpeed: {x: 5, y: 5}
   reverse: 0
   target: {fileID: 0}
 --- !u!1 &2133297874
