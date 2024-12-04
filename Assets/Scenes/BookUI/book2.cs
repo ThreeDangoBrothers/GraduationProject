@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -52,15 +53,20 @@ public class book2 : MonoBehaviour
         }
         else
         {
-            newAngle.x = -deltaPosition.y * rotationSpeed.x;
-            newAngle.y = -deltaPosition.x * rotationSpeed.y;
+            newAngle.x = deltaPosition.y * rotationSpeed.x;
+            newAngle.y = deltaPosition.x * rotationSpeed.y;
         }
         Debug.Log($"New Angle: {newAngle}");
 
         // 回転を適用
         targetObject.transform.Rotate(newAngle);
 
+
+        //前回のfoodのポジ
+        Debug.Log($"previosposition:{previousPosition}");
+        
         // 前回の座標を更新
         previousPosition = currentPosition;
+        Debug.Log($"currentposit:{currentPosition}");
     }
 }
