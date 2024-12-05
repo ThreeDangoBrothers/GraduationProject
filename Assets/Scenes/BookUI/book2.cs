@@ -11,6 +11,7 @@ public class book2 : MonoBehaviour
     [SerializeField] private GameObject target; // 座標変化を追跡するターゲット
 
     private Vector3 previousPosition; // 前回の座標
+    private bool isFoodActive; // foodがアクティブかどうか
 
     void Start()
     {
@@ -18,6 +19,7 @@ public class book2 : MonoBehaviour
         if (target != null)
         {
             previousPosition = target.transform.position;
+            isFoodActive = target.activeSelf;
         }
         else
         {
@@ -33,6 +35,29 @@ public class book2 : MonoBehaviour
     void Update()
     {
         if (target == null || targetObject == null) return;
+
+        // foodがアクティブかをチェック
+        bool currentFoodActive = target.activeSelf;
+
+        // foodが消えた場合、計算をリセット
+        if (!currentFoodActive && isFoodActive)
+        {
+            Debug.Log("Foodが消えました。位置変化をリセットします。");
+            previousPosition = Vector3.zero; // 座標変化の計算をリセット
+            isFoodActive = false;
+            return;
+        }
+
+        // foodが再び出現した場合、位置を初期化
+        if (currentFoodActive && !isFoodActive)
+        {
+            Debug.Log("Foodが再び出現しました。初期位置を設定します。");
+            previousPosition = target.transform.position; // 新しい初期位置を設定
+            isFoodActive = true;
+            return;
+        }
+
+        if (!currentFoodActive) return;
 
         // 現在のターゲット位置
         Vector3 currentPosition = target.transform.position;
@@ -61,12 +86,9 @@ public class book2 : MonoBehaviour
         // 回転を適用
         targetObject.transform.Rotate(newAngle);
 
-
-        //前回のfoodのポジ
-        Debug.Log($"previosposition:{previousPosition}");
-        
         // 前回の座標を更新
         previousPosition = currentPosition;
-        Debug.Log($"currentposit:{currentPosition}");
+        Debug.Log($"Previous Position: {previousPosition}");
+        Debug.Log($"Current Position: {currentPosition}");
     }
 }
